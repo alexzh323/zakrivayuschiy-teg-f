@@ -235,14 +235,16 @@
   position: relative;
 }
 
-.button__text {
+.button__text,
+.floppy {
   position: relative;
   z-index: 1;
   mix-blend-mode: difference;
   color: var(--main-acent-color);
 }
 /*сделал белый текст на белом фоне и дообавил mix-blend-mode. Теперь текст будет коректного
-цвета вне зависимости от фона*/
+цвета вне зависимости от фона. Для svg анаогично. Для корректной работы поменял fill="currentColor"
+во всех местах в самом svg файле*/
 
 .button-with-text:focus {
   outline: none;
