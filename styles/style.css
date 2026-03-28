@@ -71,17 +71,17 @@
   border-top: 2px solid var(--main-text-color);
 }
 
-.card-label{
+.card-label {
   position: absolute; 
   top: 25px;
   right: 25px;
   font-size: 14px;
   font-family: var(--acent-font-family);
   text-shadow: 
-  1px 1px 0 var(--main-acent-color), 
-  -1px -1px 0 var(--main-acent-color),
-  -1px 1px 0 var(--main-acent-color),
-  1px -1px 0 var(--main-acent-color);
+    1px 1px 0 var(--main-acent-color), 
+    -1px -1px 0 var(--main-acent-color),
+    -1px 1px 0 var(--main-acent-color),
+    1px -1px 0 var(--main-acent-color);
   /*фолбек для браузеов, не поддеживающх директиву supports*/
   text-transform: uppercase;
   mix-blend-mode: hard-light;
@@ -89,7 +89,7 @@
 }
 
 @supports(-webkit-text-stroke: 1px var(--main-acent-color)) {
-  .card-label{
+  .card-label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--main-acent-color);
   }
@@ -132,7 +132,7 @@
   line-height: 90%;
 }
 
-.card__icon-button  {
+.card__icon-button {
   inline-size: 38px;
   block-size: 38px;
   background-color: transparent;
