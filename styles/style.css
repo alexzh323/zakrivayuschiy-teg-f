@@ -227,6 +227,7 @@
   border: 2px solid var(--main-text-color);
   inline-size: clamp(341px, 50vw, 353px);
   block-size: 191px;
+  overflow: hidden;
   font-family: var(--acent-font-family);
   font-weight: var(--acent-font-weight);
   font-size: 14px;
