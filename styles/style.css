@@ -72,7 +72,7 @@
 }
 
 .card-label {
-  position: absolute; 
+  position: absolute;
   top: 25px;
   right: 25px;
   font-size: 14px;
@@ -82,11 +82,11 @@
     -1px -1px 0 var(--main-acent-color),
     -1px 1px 0 var(--main-acent-color),
     1px -1px 0 var(--main-acent-color);
-  /*фолбек для браузеов, не поддеживающх директиву supports*/
   text-transform: uppercase;
   mix-blend-mode: hard-light;
   opacity: 50%;
 }
+/*фолбек для браузеов, не поддеживающх директиву supports*/
 
 @supports(-webkit-text-stroke: 1px var(--main-acent-color)) {
   .card-label {
