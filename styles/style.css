@@ -14,6 +14,8 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   background-image: var(--backgroung-gradent);
+  background-attachment: fixed;
+  /*Надо исправить: фоновое изобажение зафиксировано*/
   background-size: cover;
   font-family: var(--main-font-family);
   font-variation-settings: "wght" var(--card-text-weight);
@@ -26,7 +28,7 @@
   display: flex;
   flex-direction: column;
   inline-size: var(--block-width);
-  min-height: 100px;
+  /*Надо исправить: высота у всех контентных и текстовых блоков удалена*/
   align-items: center;
   justify-content: center;
   border: 2px solid var(--main-text-color);
@@ -98,14 +100,17 @@
 .card-image {
   display: block;
   inline-size: 100%;
-  block-size: 100%;
+  aspect-ratio: 1 / 1;
+  /*Можно лучше: задано соотношениие сторон 1 к 1 для квадатной картинки*/
   object-position: center;
   object-fit: cover;
 }
 .text-container {
   margin: 25px;
   margin-top: 20px;
-  line-height: 21px;
+  line-height: 1.166em;
+  /*Можно лучше: использован относителный размер строки.
+  Поскольку это потомок нижнего уровня, проблем с нежелетельным наследоованием не будет*/
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -116,12 +121,11 @@
   align-self: flex-end;
   margin: 0 25px 25px 0;
   display: flex;
-  gap: 1px;
+  gap: 2px;
 }
 
 .card__like-button {
   inline-size: 130px;
-  block-size: 38px;
   text-transform: lowercase;
   background-color: transparent;
   border: 2px solid var(--main-text-color);
@@ -152,8 +156,9 @@
 }
 
 .like-icon {
-  inline-size: 27px;
-  block-size: 24px;
+  inline-size: 38px;
+  /*Надо исправить: задан корректный размер иконки сердечка*/
+  block-size: auto;
   flex-shrink: 0;
   /*теперь svg не дифформируется при фокусе*/
 }
@@ -162,38 +167,38 @@
   cursor: pointer;
 }
 
-.free-sprint {
+.grayscale {
   filter:grayscale(80%);
 }
 
-.blank-list {
+.saturate {
   filter:saturate(10);
 }
 
-.ono-tebe-nado {
+.contrast-saturate-mask {
   filter:contrast(2) saturate(3);
   mask-image: linear-gradient(to right, transparent 10%, rgb(0 0 0) 100%);
   /*в задании нужны только фильтры, но данное оформллене подчеркивает смысл карточки плюс помогает закрепить темы 
   масок и градиентов, пойденные в этом спринте*/
 }
 
-.pixel-perfect {
+.blur {
   filter: blur(1vw);
 }
 
-.hover {
+.hue-rotate-green {
   filter: hue-rotate(90deg);
 }
 
-.new-strategies {
+.hue-rotate-blue {
   filter: hue-rotate(180deg);
 }
 
-.hard-to-focus {
+.sepia {
   filter: sepia(50%);
 }
 
-.zakrivayuchiy-teg {
+.saturate-hue-rotate-purple {
   filter: hue-rotate(270deg) saturate(5);
 }
 
@@ -216,17 +221,23 @@
 }
 
 .floppy {
-  inline-size: 21px;
-  block-size: 21px;
+  inline-size: 28px;
+  block-size: auto;
   display: block;
   align-self: center;
   justify-self: center;
+  /*Надо исправить: задан корректный размер иконки дискеты для маленких экранов.
+  Медиазапрос для больших экранов обновлен: там размер по-прежнему 21px*/
 }
 
 .dialog[open] {
   border: 2px solid var(--main-text-color);
   inline-size: clamp(341px, 50vw, 353px);
-  block-size: 191px;
+  padding: 0;
+  /*Надо исправить: теперь текст не съезжает при изменении ширины экрана:
+  найдены через инструменты разработчика и убраны внутренние отступы по умолчанию 
+  для всплывающего окна.
+  именно они ломали всю верстку*/
   overflow: hidden;
   font-family: var(--acent-font-family);
   font-weight: var(--acent-font-weight);
@@ -243,7 +254,7 @@
   margin: 0 var(--dialog-margin);
   border: 2px solid var(--main-text-color);
   background-color: transparent;
-  block-size: 38px;
+  padding: 12px 0;
   margin-bottom: 30px;
 }
 
@@ -261,6 +272,9 @@
 
 .dialog-text {
   display: block;
+  text-transform: uppercase;
+  line-height: 1.5em;
+  /*Надо исправить: добавлена трансформация в верхний регистр и величина строк*/
 }
 
 .button-with-text {
@@ -373,6 +387,11 @@
 @media(width >= 376px) {
   .save-container {
     flex-direction: row;
+  }
+
+  .floppy {
+    inline-size: 21px;
+    block-size: auto;
   }
 }
 /*изменение кнопки сохранения для широких экранов. изначальный дизайн дя узких (mobile-first)*/

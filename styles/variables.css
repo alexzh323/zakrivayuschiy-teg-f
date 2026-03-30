@@ -8,11 +8,13 @@
   --dialog-margin: 40px;
 
   /*размер ширины резнового блока*/
-  --block-width: clamp(375px, calc(100vw - 4px), 700px);
+  --block-width: clamp(375px, calc(100vw - 12px), 700px);
+  /*Надо исправить: теперь экран не скроллится при промежуточных значениях*/
 
   /*шифты*/
   --main-font-family: "Inter-Variable", "Roboto", sans-serif;
-  --acent-font-family: "PressStart2P", "Courier", monospace;
+  --acent-font-family: "PressStart2P", fantasy;
+  /*Можно лучше: добавлен корректный альтернативный шрифт*/
   --card-heading-weight: 715;
   --card-text-weight: 410;
   --acent-font-weight: 400;

@@ -26,7 +26,8 @@
         <li class="card">
           <h2 class="card-heading">Фритрек и нулевой спринт: Подготовка к работе</h2>
           <div class="image-container">
-            <img class="card-image free-sprint" src="./images/card-image.png" alt="боковой крупный план пиксельного изобажения: белый фургон с красными деталями на фоне ночной дороги">
+            <img class="card-image grayscale" src="./images/card-image.png" alt="боковой крупный план пиксельного изобажения: белый фургон с красными деталями на фоне ночной дороги">
+            <!--Надо исправить: имена классов ориентированы на фильтры-->
             <p class="card-label">&lt;с нуля&gt;</p>
           </div>
           <div class="text-container">
@@ -34,8 +35,11 @@
             <p>Я уже изучал JavaScrpt до этого. Но верстка была для меня чем-то принцпиально новым. Мои программы по большей части работали, но выглядеи как набор элементов, хаотично разбросанных по белому экрану</p>
           </div>
           <div class="button-contaner">
-            <button class="card__icon-button button">
-              <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="card__icon-button button" type="button" aria-label="Кнопка с сердечком">
+              <!--Надо исправить: задан тип для всех кнопок-->
+              <!--Можно лучше: скрыл от ридера необязательные элементы: сердечки и дискеты
+              Для интерактивной кнопки лайка добавил aria-label на языке страницы-->
+              <svg class="like-icon" aria-hidden="true" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="black"/>
                   <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" fill="#FF0000"/>
@@ -44,7 +48,7 @@
                 <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="#FF0000"/>
               </svg>
             </button>
-            <button class="card__like-button button button-with-text">
+            <button class="card__like-button button button-with-text" type="button">
               <span class="button__text">like</span>
             </button>
           </div>
@@ -53,7 +57,8 @@
         <li class="card">
           <h2 class="card-heading">1 спринт: Я — чистый лист</h2>
           <div class="image-container">
-            <img class="card-image blank-list" src="./images/card-image.png" alt="боковой крупный план пиксельного изобажения: белый фургон с красными деталями на фоне ночной дороги">
+            <img class="card-image saturate" src="./images/card-image.png" loading="lazy" alt="боковой крупный план пиксельного изобажения: белый фургон с красными деталями на фоне ночной дороги">
+            <!--Можно лучше: задал ленивую загрузку для второй и последующих картинок-->
             <p class="card-label">&lt;первые шаги&gt;</p>
           </div>
           <div class="text-container">
@@ -61,8 +66,8 @@
             <p>Первая мысль была: "Вёрстка - это же скучно! Сделал отступ у одного элемента, затем у другого..." А потом я более подробно познакомился с flex и grid и жизнь сразу заиграла новыми красками!</p>
           </div>
           <div class="button-contaner">
-            <button class="card__icon-button button">
-              <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="card__icon-button button" type="button" aria-label="Кнопка с сердечком">
+              <svg class="like-icon" aria-hidden="true" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="black"/>
                   <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" fill="#FF0000"/>
@@ -71,7 +76,7 @@
                 <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="#FF0000"/>
               </svg>
             </button>
-            <button class="card__like-button button button-with-text">
+            <button class="card__like-button button button-with-text" type="button">
               <span class="button__text">like</span>
             </button>
           </div>
@@ -80,7 +85,7 @@
        <li class="card">
           <h2 class="card-heading">1 спринт: А если не получится?</h2>
           <div class="image-container">
-            <img class="card-image ono-tebe-nado" src="./images/card-image.png" alt="боковой крупный план пиксельного изобажения: белый фургон с красными деталями на фоне ночной дороги">
+            <img class="card-image contrast-saturate-mask" src="./images/card-image.png" loading="lazy" alt="боковой крупный план пиксельного изобажения: белый фургон с красными деталями на фоне ночной дороги">
             <p class="card-label">&lt;оно тебе надо!&gt;</p>
           </div>
           <div class="text-container">
@@ -88,8 +93,8 @@
             <p>Когда я увидел первый проект, реакция была однозначна: "Это невозможно..." Но я верстал элемент за элементом и с каждой следующей строчкой кода мой пессимизм таял. В итоге спокойно уожился в дедлайн!</p>
           </div>
           <div class="button-contaner">
-            <button class="card__icon-button button">
-              <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="card__icon-button button" type="button" aria-label="Кнопка с сердечком">
+              <svg class="like-icon" aria-hidden="true" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="black"/>
                   <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" fill="#FF0000"/>
@@ -98,7 +103,7 @@
                 <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="#FF0000"/>
               </svg>
             </button>
-            <button class="card__like-button button button-with-text">
+            <button class="card__like-button button button-with-text" type="button">
               <span class="button__text">like</span>
             </button>
           </div>
@@ -107,7 +112,7 @@
         <li class="card">
           <h2 class="card-heading">2 спринт: Погоня за идеалом</h2>
           <div class="image-container">
-            <img class="card-image pixel-perfect" src="./images/card-image.png" alt="боковой крупный план пиксельного изобажения: белый фургон с красными деталями на фоне ночной дороги">
+            <img class="card-image blur" src="./images/card-image.png" loading="lazy" alt="боковой крупный план пиксельного изобажения: белый фургон с красными деталями на фоне ночной дороги">
             <p class="card-label">&lt;pixel-perfect&gt;</p>
           </div>
           <div class="text-container">
@@ -115,8 +120,8 @@
             <p>Второй спринт я начал с опазданием, поскольку повредил глаз. В итоге пару недель в газах немного двоилось, как будто забыл выключить плагиин PixelPerfect</p>
           </div>
           <div class="button-contaner">
-            <button class="card__icon-button button">
-             <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="card__icon-button button" type="button" aria-label="Кнопка с сердечком">
+             <svg class="like-icon" aria-hidden="true" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="black"/>
                   <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" fill="#FF0000"/>
@@ -125,7 +130,7 @@
                 <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="#FF0000"/>
               </svg>
             </button>
-            <button class="card__like-button button button-with-text">
+            <button class="card__like-button button button-with-text" type="button">
               <span class="button__text">like</span>
             </button>
           </div>
@@ -134,7 +139,7 @@
         <li class="card">
           <h2 class="card-heading">2 спринт: О тех, кто рядом</h2>
           <div class="image-container">
-            <img class="card-image hover" src="./images/card-image.png" alt="боковой крупный план пиксельного изобажения: белый фургон с красными деталями на фоне ночной дороги">
+            <img class="card-image hue-rotate-green" src="./images/card-image.png" loading="lazy" alt="боковой крупный план пиксельного изобажения: белый фургон с красными деталями на фоне ночной дороги">
             <p class="card-label">&lt;посмотри в окно&gt;</p>
           </div>
           <div class="text-container">
@@ -142,8 +147,8 @@
             <p>Псевдоклассы и псевдоэлементы, это было здорово! Оказывается парой строчек в css можно добиться результата, сопоставимого нескольким функциям JavaScript.</p>
           </div>
           <div class="button-contaner">
-            <button class="card__icon-button button">
-              <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="card__icon-button button" type="button" aria-label="Кнопка с сердечком">
+              <svg class="like-icon" aria-hidden="true" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="black"/>
                   <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" fill="#FF0000"/>
@@ -152,7 +157,7 @@
                 <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="#FF0000"/>
               </svg>
             </button>
-            <button class="card__like-button button button-with-text">
+            <button class="card__like-button button button-with-text" type="button">
               <span class="button__text">like</span>
             </button>
           </div>
@@ -161,7 +166,7 @@
         <li class="card">
           <h2 class="card-heading">3 спринт: Обходные стратегии</h2>
           <div class="image-container">
-            <img class="card-image new-strategies" src="./images/card-image.png" alt="боковой крупный план пиксельного изобажения: белый фургон с красными деталями на фоне ночной дороги">
+            <img class="card-image hue-rotate-blue" src="./images/card-image.png" loading="lazy" alt="боковой крупный план пиксельного изобажения: белый фургон с красными деталями на фоне ночной дороги">
             <p class="card-label">&lt;адаптивная вёрстка&gt;</p>
           </div>
           <div class="text-container">
@@ -169,8 +174,8 @@
             <p>Переменные, которые меняются в зависимости от разлчных факторов и медиазапросы. Это было увлекательно!</p>
           </div>
           <div class="button-contaner">
-            <button class="card__icon-button button">
-              <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="card__icon-button button" type="button" aria-label="Кнопка с сердечком">
+              <svg class="like-icon" aria-hidden="true" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="black"/>
                   <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" fill="#FF0000"/>
@@ -179,7 +184,7 @@
                 <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="#FF0000"/>
               </svg>
             </button>
-            <button class="card__like-button button button-with-text">
+            <button class="card__like-button button button-with-text" type="button">
               <span class="button__text">like</span>
             </button>
           </div>
@@ -188,7 +193,7 @@
         <li class="card">
           <h2 class="card-heading">3 спринт: Когда опускаются руки</h2>
           <div class="image-container">
-            <img class="card-image hard-to-focus" src="./images/card-image.png" alt="боковой крупный план пиксельного изобажения: белый фургон с красными деталями на фоне ночной дороги">
+            <img class="card-image sepia" src="./images/card-image.png" loading="lazy" alt="боковой крупный план пиксельного изобажения: белый фургон с красными деталями на фоне ночной дороги">
             <p class="card-label">&lt;сложно сосредоточиться&gt;</p>
           </div>
           <div class="text-container">
@@ -196,8 +201,8 @@
             <p>Конец спринта был довльно нервным. Особенно запомнились автотесты, выдающие пробему раз за разом. Было несколько критических ошибок, перечеркивающих часы работы. Зато этап ревью прошел на удивение легко.</p>
           </div>
           <div class="button-contaner">
-            <button class="card__icon-button button">
-             <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="card__icon-button button" type="button" aria-label="Кнопка с сердечком">
+             <svg class="like-icon" aria-hidden="true" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="black"/>
                   <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" fill="#FF0000"/>
@@ -206,7 +211,7 @@
                 <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="#FF0000"/>
               </svg>
             </button>
-            <button class="card__like-button button button-with-text">
+            <button class="card__like-button button button-with-text" type="button">
               <span class="button__text">like</span>
             </button>
           </div>
@@ -215,7 +220,7 @@
         <li class="card">
           <h2 class="card-heading">«Сейчас я здесь»</h2>
           <div class="image-container">
-            <img class="card-image zakrivayuchiy-teg" src="./images/card-image.png" alt="боковой крупный план пиксельного изобажения: белый фургон с красными деталями на фоне ночной дороги">
+            <img class="card-image saturate-hue-rotate-purple" src="./images/card-image.png" loading="lazy" alt="боковой крупный план пиксельного изобажения: белый фургон с красными деталями на фоне ночной дороги">
             <p class="card-label">&lt;закрывающий тег&gt;</p>
           </div>
           <div class="text-container">
@@ -223,8 +228,8 @@
             <p>Это было супер!</p>
           </div>
           <div class="button-contaner">
-            <button class="card__icon-button button">
-              <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="card__icon-button button" type="button" aria-label="Кнопка с сердечком">
+              <svg class="like-icon" aria-hidden="true" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g class="heart">
                   <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="black"/>
                   <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" fill="#FF0000"/>
@@ -233,7 +238,7 @@
                 <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="#FF0000"/>
               </svg>
             </button>
-            <button class="card__like-button button button-with-text">
+            <button class="card__like-button button button-with-text" type="button">
               <span class="button__text">like</span>
             </button>
           </div>
@@ -241,8 +246,8 @@
 
       </ul>
       
-      <button class="save-container button button-with-text" onclick="window['dialog'].showModal()" aria-controls="dialog">
-        <svg class="floppy" viewBox="0 0 21 21">
+      <button class="save-container button button-with-text" onclick="window['dialog'].showModal()" aria-controls="dialog" type="button">
+        <svg class="floppy" viewBox="0 0 21 21" aria-hidden="true">
           <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <span class="button__text">Сохранить на память</span>
@@ -250,13 +255,13 @@
 
       <dialog id="dialog" class="dialog">
         <div class="dialog-container">
-         <svg class="floppy" viewBox="0 0 21 21">
+         <svg class="floppy" viewBox="0 0 21 21" aria-hidden="true">
           <use href="./svg/floppy.svg#floppy"></use>
          </svg>
          <p class="dialog-text">Вставьте дискету, чтобы продолжить</p>
         </div>
 
-        <button class="dialog-button button button-with-text" onclick="window['dialog'].close()" aria-controls="dialog">
+        <button class="dialog-button button button-with-text" onclick="window['dialog'].close()" aria-controls="dialog" type="button">
           <span class="button__text">ok</span>
         </button>
       </dialog>
